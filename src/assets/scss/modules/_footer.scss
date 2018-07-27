@@ -1,0 +1,135 @@
+footer {
+  margin-top: rem-calc(60);
+  background: $dark-bg;
+  color: $white;
+  font-family: $nova-regular;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $nova-bold;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: rem-calc(16);
+    color: $white;
+    margin-bottom: 0.8rem;
+  }
+  a, p, div {
+    font-family: $nova-regular;
+    font-weight: 400;
+    color: $gray;
+    font-size: rem-calc(14);
+    line-height: rem-calc(22);
+  }
+}
+.footer-container {
+  @include xy-grid-container;
+  //border-top: 1px solid $medium-gray;
+ 
+  
+}
+
+.footer-grid {
+  @include xy-grid;
+  padding: rem-calc(27) 0;
+
+  section {
+   &:first-child {
+     margin-left: 0;
+   }
+    &:last-child {
+      margin-right: 0;
+      margin-top: rem-calc(40);
+    }
+    @include xy-cell(auto);
+    &:nth-child(2) {
+      flex: auto !important;
+      @include xy-cell(6);
+      padding-left: 7%;
+      padding-right: 7%;
+      margin-top: rem-calc(40);
+    }
+    @include breakpoint(medium down) {
+      flex: 1 100% !important;
+      &:nth-child(2) {
+        padding-left: 0;
+        margin-top: 0;
+      }
+      &:first-child {
+        a img,
+        img {
+          margin: 0 auto;
+          max-width: 350px !important;
+          width: 100%;
+          display: block;
+        }
+      }
+      &:first-child,
+      &:last-child {
+        margin-left: 0.9375rem;
+        margin-right: 0.9375rem;
+        margin-top: 0;
+       
+      }
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+    color: $white;
+    li {
+      display: block;
+      list-style: disc;
+      color: inherit;
+      width: 100%;
+      a {
+        padding-left: 0;
+        color: inherit;
+        @include transition-basics(all .5s);
+        &:focus,
+        &:active,
+        &:hover {
+          color: $green;
+          background: transparent;
+          outline: none;
+          border: none;
+          box-shadow: none;
+        }
+        &:visited {
+          color: $white;
+          &:hover {
+            color: $green;
+          }
+        }
+      }
+      &:focus,
+      &:active,
+      &:hover {
+        color: $green;
+        background: transparent;
+        outline: none;
+        border: none;
+        box-shadow: none;
+      }
+      
+    }
+  }
+}
+.footer-copyright {
+  border-top: 1px solid rgba(255, 255, 255, .15);
+  padding: rem-calc(25) 0;
+  p {
+    text-align: center;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: $gray;
+    font-size: rem-calc(14);
+    line-height: rem-calc(22);
+    img {
+      margin: 0 10px;
+    }
+  }
+}

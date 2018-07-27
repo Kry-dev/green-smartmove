@@ -1,0 +1,254 @@
+.post-meta {
+	text-align: left;
+	display: block;
+	margin-bottom: 3px;
+	.separator {
+		display: inline-block;
+		margin: 0 rem-calc(10);
+		color: #b2b2b2;
+		font-size: rem-calc(14);
+		line-height: 1;
+	}
+	time, .author {
+		display: inline-block;
+		color: #b2b2b2;
+		font-size: rem-calc(14);
+		line-height: 1;
+	}
+}
+.main-blog {
+	@include xy-grid-container();
+	padding-top: 2.5%;
+}
+.post-more {
+	display: block;
+	color: $green;
+	background: transparent;
+	border: 1px solid $green;
+	max-width: rem-calc(160);
+	width: 100%;
+	text-align: center;
+	border-radius: 21px;
+	font-family: $nova-bold;
+	font-size: rem-calc(16);
+	line-height: 1;
+	padding: rem-calc(12);
+	margin-top: rem-calc(10);
+	@include transition(all .5s);
+	&:hover {
+		background: $green;
+		color: $white;
+	}
+	&.press {
+		border: none;
+		text-align: center;
+		margin: 0 auto;
+		margin-top: 9px;
+		max-width: rem-calc(200);
+		width: auto;
+	}
+}
+.post-content {
+	color: $txt-color;
+	line-height: 1.9;
+}
+.post-title {
+	color: $title-color;
+	font-size: rem-calc(20);
+	font-family: $nova-bold;
+	line-height: 1;
+	margin-bottom: 3px;
+	margin-top: 5px;
+	@include transition(all .5s);
+	a {
+		color: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		font-family: inherit;
+		@include transition(all .5s);
+		&:hover {
+			color: $green;
+		}
+	}
+}
+.article-container {
+	border-radius: 15px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+	@include transition(all .5s);
+	margin-bottom: 4.05%;
+	padding: 20px 21px;
+	&:hover {
+		cursor: pointer;
+		box-shadow: 0 15px 80px rgba(0, 0, 0, 0.15);
+	}
+	&:last-child {
+		margin-bottom: 3.3%;
+	}
+}
+.has-thumbnail {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	& > a {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+}
+.article-thumbnail {
+	flex: 4;
+	img {
+		max-width: rem-calc(350);
+		width: 100%;
+		height: auto;
+		display: block;
+		margin: 0;
+		margin-right: 20px;
+	}
+	@include breakpoint(medium down) {
+		img {
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
+		flex: 1 100%;
+	}
+}
+.article-content {
+	padding-left: 9px;
+	flex: 8;
+	@include breakpoint(medium down) {
+		flex: 1 100%;
+		padding-left: 0;
+		text-align: justify;
+	}
+}
+
+.pagination {
+	padding-top: 12px;
+	border-top: 1px solid #e5e5e5;
+	text-align: left;
+	width: 100%;
+	li {
+		margin-bottom: 15px;
+		a, span, button {
+			padding: 0.1875rem 0.42rem;
+			color: $green;
+			font-size: rem-calc(16);
+			line-height: rem-calc(24);
+			font-family: $nova-regular;
+			font-weight: bold;
+			@include transition(all .5s);
+			&.current {
+				background: transparent;
+				color: #808080;
+			}
+			&:hover {
+				background: transparent;
+				color: #808080;
+			}
+		}
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+	@include breakpoint(medium down) {
+		li {
+			display: inline-block;
+		}
+	}
+}
+
+.in-press {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding-top: 2%;
+	.has-thumbnail {
+		flex-direction: column;
+	}
+	.article-thumbnail {
+		display: block;
+		flex: 1 100%;
+		width: 100%;
+		img {
+			display: block;
+			margin: 0 auto;
+			max-height: 60px;
+			height: 100%;
+			width: auto;
+			max-width: inherit;
+		}
+	}
+	.article-container {
+		@include breakpoint(medium) {
+			flex: 1 calc(50% - 30px);
+			margin-bottom: 30px;
+			margin-left: 15px;
+			margin-right: 15px;
+		}
+	}
+	.article-content {
+		padding-left: 0;
+		header {
+			text-align: center;
+		}
+		
+	}
+	.post-content {
+		font-family: $nova-italic;
+		color: $txt-color;
+		line-height: 1.5;
+	}
+	.post-title {
+		margin-top: 5.6%;
+		margin-bottom: 9px;
+	}
+}
+.partners-blog {
+	padding-top: 0;
+	.article-thumbnail {
+		flex: 2;
+		@include breakpoint(medium down) {
+			flex: 1 100%;
+		}
+		img {
+			width: auto;
+		}
+	}
+	.article-content {
+		margin-left: -9px;
+		flex: 10;
+		padding-left: 0;
+		@include breakpoint(medium down) {
+			margin-left: 0;
+			flex: 1 100%;
+		}
+	}
+	.post-title {
+		margin-bottom: 8px;
+		margin-top: 6px;
+	}
+	.article-container {
+		&:hover {
+			.post-title {
+				color: $green;
+			}
+		}
+	}
+}
+.quote {
+	color: $txt-color;
+	font-family: $nova-italic;
+	font-weight: 300;
+	font-size: rem-calc(16);
+	line-height: rem-calc(24);
+	border-left: 3px solid $green;
+	padding-left: 20px;
+	margin-top: 20px;
+}

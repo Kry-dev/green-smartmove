@@ -1,0 +1,105 @@
+
+.top-bar .top-bar-social,
+.top-bar-social {
+	background: transparent;
+	margin: 0;
+	padding: 0;
+	margin-top: rem-calc(15);
+	margin-right: rem-calc(10);
+	@include breakpoint(medium only) {
+		padding-right: rem-calc(15);
+	}
+	@include breakpoint(large only) {
+		padding-right: rem-calc(15);
+	}
+	li {
+		display: inline-block;
+		@include transition-basics(all .5s);
+		&:not(:last-child) {
+			margin-right: 7px;
+		}
+		a {
+			color: $green;
+			width: rem-calc(31);
+			height: rem-calc(31);
+			border: 2px solid $green;
+			border-radius: 50%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			@include transition-basics(all .5s);
+			&:hover {
+				color: $white;
+				border: 2px solid $white;
+			}
+		}
+	}
+}
+.header-description {
+	@include xy-grid-container;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: center;
+	margin-top: -7.5%;
+	margin-bottom: rem-calc(50);
+	a {
+		font-family: $nova-regular;
+		min-height: rem-calc(406);
+		border-radius: rem-calc(15);
+		background: $white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+		text-align: center;
+		margin: 0 rem-calc(15);
+		padding: 20px;
+		color: #212121;
+		filter: drop-shadow(0 5px 20px rgba(0, 0, 0, .2));
+		@include transition-basics(all .5s);
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		h3 {
+			font-size: rem-calc(20);
+			font-family: $nova-bold;
+			margin-top: rem-calc(28);
+		}
+		p {
+			color: $txt-color;
+			margin-bottom: 0;
+			font-size: rem-calc(16);
+		}
+		&:hover {
+			color: $green;
+			filter: drop-shadow(0 5px 20px rgba(0, 0, 0, .45));
+		}
+		@include xy-cell(3);
+		@include breakpoint(medium down) {
+			@include xy-cell(6);
+			margin: 0 auto;
+			min-height: inherit;
+			margin-bottom: rem-calc(30);
+			&:first-child {
+				margin: 0 auto;
+				margin-bottom: rem-calc(30);
+			}
+			&:last-child {
+				margin: 0 auto;
+				margin-bottom: rem-calc(30);
+			}
+		}
+		
+		@include breakpoint(small down) {
+			@include xy-cell(12);
+		}
+	}
+	@include breakpoint(medium down) {
+		margin-top: rem-calc(-30);
+	}
+}

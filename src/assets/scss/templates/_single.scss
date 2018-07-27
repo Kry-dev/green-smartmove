@@ -1,0 +1,39 @@
+.article-title {
+	color: $title-color;
+	font-size: rem-calc(50);
+	font-family: $nova-regular;
+	text-align: center;
+	line-height: 1.17;
+	display: block;
+	max-width: 70%;
+	margin: 0 auto 5.7%;
+}
+.single {
+	.main-article {
+		padding-top: 2%;
+		img {
+			border-radius: 15px;
+			display: block;
+			margin: 0 auto;
+		}
+		.entry-content {
+			p {
+				
+				@include breakpoint(medium down) {
+					text-align: justify;
+				}
+			}
+		}
+	}
+	.single-thumbnail {
+		margin-bottom: rem-calc(24);
+	}
+	.quote {
+		max-width: 80%;
+		margin: 3% auto;
+		@include breakpoint(medium down) {
+			max-width: 100%;
+		}
+	}
+}
+

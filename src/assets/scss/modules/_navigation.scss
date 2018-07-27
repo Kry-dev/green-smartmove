@@ -1,0 +1,257 @@
+// Navigation breakpoints
+.mobile-menu,
+.site-title-bar {
+  @include hide-for(medium);
+}
+
+.desktop-menu,
+.site-navigation .top-bar-left {
+  @include show-for(medium);
+}
+
+// Site title
+.site-desktop-title a {
+  font-weight: bold;
+}
+
+// Mobile menu
+.mobile-menu {
+  display: none; // prevents repaint caused by JS hiding menu onload
+}
+
+.off-canvas {
+  > ul.menu {
+    height: 100vh;
+    padding: 1rem;
+		background: $dark-bg;
+		li {
+			a {
+				font-family: $nova-regular;
+				color: $white;
+				font-weight: 400;
+				font-size: rem-calc(16);
+			}
+			&.is-active {
+				& > a {
+					color: $green;
+					background-color: transparent;
+				}
+			}
+		}
+  
+  }
+
+}
+.title-bar {
+	padding: 0 rem-calc(10);
+}
+.title-bar-left {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	.top-bar-social {
+		margin-top: 0;
+		padding-right: 5px;
+	}
+}
+
+.top-bar-title {
+  margin: 0;
+  margin-top: rem-calc(4);
+  img {
+    max-width: rem-calc(170);
+    width: 100%;
+    height: auto;
+  }
+  a {
+		display: inline-block;
+    font-weight: 600;
+    font-size: rem-calc(18);
+    color: $green;
+    padding-left: 1rem;
+    line-height: 1;
+    font-family: $nova-bold;
+		img {
+			max-width: rem-calc(170);
+			width: 100%;
+			height: auto;
+		}
+  }
+	&.site-mobile-title {
+		margin: 0;
+		a {
+			padding: 0;
+			img {
+				padding: 0;
+				margin: 0;
+				max-width: rem-calc(100);
+			}
+		}
+		img {
+			padding: 0;
+			margin: 0;
+			max-width: rem-calc(100);
+		}
+	}
+}
+
+.mobile-menu,
+.mobile-off-canvas-menu {
+
+  .menu .is-active > a {
+    background-color: lighten($dark-nav-color, 5%);
+  }
+}
+.menu .is-active > a {
+	background: transparent;
+}
+// Tablet and desktop menu
+.top-bar-menu {
+  margin-top: rem-calc(15);
+}
+.top-bar {
+  background: rgba(0, 0, 0, .8);
+  & > .container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    max-width: rem-calc(1200);
+    margin: 0 auto;
+  }
+  .top-bar-title {
+    margin: 0;
+    margin-top: rem-calc(4);
+    img {
+      max-width: rem-calc(170);
+      width: 100%;
+      height: auto;
+    }
+    a {
+			display: inline-block;
+      font-weight: 600;
+      font-size: rem-calc(18);
+      color: $green;
+      padding-left: 1rem;
+      line-height: 1;
+      font-family: $nova-bold;
+			img {
+				max-width: rem-calc(170);
+				width: 100%;
+				height: auto;
+			}
+    }
+  }
+  
+  .menu {
+    background: transparent;
+    a {
+      font-family: $nova-regular;
+      color: $white;
+      padding-top: 0;
+      padding-bottom: 0;
+      font-weight: 400;
+      font-size: rem-calc(18);
+      line-height: 1;
+      @include transition-basics(all .5s);
+      &:focus:not(.button),
+      &:hover:not(.button) {
+        background-color: transparent;
+        color: $green;
+      }
+    }
+    li {
+      &.is-active {
+        & > a {
+          background-color: transparent;
+          color: $green;
+        }
+      }
+      &:not(.menu-text) {
+        & > a {
+          padding: 1rem;
+					@media screen and (max-width: 843px) and (min-width: 769px) {
+						padding: .5rem;
+						font-size: 16px;
+					}
+        }
+      }
+      &:not(:last-child) {
+       // border-right: 1px solid #4e4e4e;
+      }
+    }
+    &.dropdown {
+      @include transition-basics(all .5s);
+      .submenu {
+				display: block !important;
+        border: 0;
+				background: $white;
+				border-radius: 15px;
+				padding: 4px;
+				border-bottom: 5px solid #5da525;
+				box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+				opacity: 0 !important;
+				z-index: -5;
+				@include transition(all .3s);
+				a {
+					color: $txt-color;
+					&:hover {
+						color: $green;
+					}
+				}
+				&.js-dropdown-active {
+					opacity: 1 !important;
+					z-index: 15;
+				}
+      }
+      .has-submenu.is-down-arrow {
+        & > a {
+          &:after {
+            border: 0;
+          }
+        }
+        a {
+          padding-right: 1rem;
+					color: $txt-color;
+        }
+      }
+      &:first-child {
+        & > li {
+          &.is-dropdown-submenu-parent {
+            & > a {
+              &:after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+.site-navigation {
+  @include breakpoint(small down) {
+    display: none;
+  }
+  @include breakpoint(small only) {
+    padding: 0; // prevents container visibility on small screens
+  }
+}
+
+// WP post navigation
+.post-navigation {
+  @include clearfix;
+}
+
+.nav-previous {
+  float:left;
+}
+
+.nav-next {
+  float:right;
+}

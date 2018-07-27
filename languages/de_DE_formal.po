@@ -1,0 +1,333 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: gsmtheme v5.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-12 17:53+0200\n"
+"PO-Revision-Date: 2016-10-16 10:06+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ gsmtheme
+#: 404.php:8
+msgid "File Not Found"
+msgstr "Datei nicht gefunden"
+
+# @ gsmtheme
+#: 404.php:12
+msgid ""
+"The page you are looking for might have been removed, had its name changed, "
+"or is temporarily unavailable."
+msgstr ""
+"Die Seite, die du suchst, wurde möglicherweise entfernt oder umbenannt, oder "
+"ist vorübergehend nicht verfügbar."
+
+# @ gsmtheme
+#: 404.php:14
+msgid "Please try the following:"
+msgstr "Bitte versuche folgendes:"
+
+# @ gsmtheme
+#: 404.php:16
+msgid "Check your spelling"
+msgstr "Überprüfe deine Eingabe"
+
+# @ gsmtheme
+#: 404.php:17
+#, php-format
+msgid "Return to the <a href=\"%s\">home page</a>"
+msgstr "Zurück zur <a href=\"%s\">Startseite</a>"
+
+# @ gsmtheme
+#: 404.php:18
+msgid "Click the <a href=\"javascript:history.back()\">Back</a> button"
+msgstr ""
+"Klicke auf die <a href=\"javascript:history.back()\">Zurück</a> Schaltfläche"
+
+# @ gsmtheme
+#. /previous pages when applicable
+#: archive.php:21 index.php:24 search.php:25
+msgid "&larr; Older posts"
+msgstr "&larr; ältere Beiträge"
+
+# @ gsmtheme
+#: archive.php:22 index.php:25 search.php:26
+msgid "Newer posts &rarr;"
+msgstr "neuere Beiträge &rarr;"
+
+# @ gsmtheme
+#: comments.php:8
+#, php-format
+msgid "<cite class=\"fn\">%s</cite>"
+msgstr ""
+
+# @ gsmtheme
+#: comments.php:9
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+# @ gsmtheme
+#: comments.php:10
+msgid "(Edit)"
+msgstr "(Bearbeiten)"
+
+# @ gsmtheme
+#: comments.php:16
+msgid "Your comment is awaiting moderation."
+msgstr "Dein Kommentar wartet auf Freischaltung."
+
+# @ gsmtheme
+#: comments.php:31
+msgid "Please do not load this page directly. Thanks!"
+msgstr "Bitte diese Seite nicht direkt laden. Vielen Dank!"
+
+# @ gsmtheme
+#: comments.php:36
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"Dieser Beitrag ist passwortgeschützt. Um die Kommentare zu sehen, musst du "
+"das Passwort eingeben."
+
+# @ gsmtheme
+#: comments.php:46
+msgid "No Responses to"
+msgstr "Keine Antworten auf"
+
+# @ gsmtheme
+#: comments.php:46
+msgid "One Response to"
+msgstr "Eine Antwort auf"
+
+# @ gsmtheme
+#: comments.php:46
+msgid "% Responses to"
+msgstr "% Antworten auf"
+
+# @ gsmtheme
+#: comments.php:53
+msgid "&larr; Older comments"
+msgstr "&larr; ältere Kommentare"
+
+# @ gsmtheme
+#: comments.php:54
+msgid "Newer comments &rarr;"
+msgstr "neuere Kommentare &rarr;"
+
+# @ gsmtheme
+#: comments.php:61
+msgid "Leave a Reply"
+msgstr "Antworten"
+
+# @ gsmtheme
+#: comments.php:61
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Antworte auf %s"
+
+# @ gsmtheme
+#: comments.php:64
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+"Du musst <a href=\"%s\">angemeldet</a> sein, um einen Kommentar abzugeben."
+
+# @ gsmtheme
+#: comments.php:68
+#, php-format
+msgid "Logged in as <a href=\"%s/wp-admin/profile.php\">%s</a>."
+msgstr "Angemeldet als <a href=\"%s/wp-admin/profile.php\">%s</a>."
+
+# @ gsmtheme
+#: comments.php:68
+msgid "Log out of this account"
+msgstr "Von diesem Konto abmelden"
+
+# @ gsmtheme
+#: comments.php:68
+msgid "Log out &raquo;"
+msgstr "Abmelden &raquo;"
+
+# @ gsmtheme
+#: comments.php:71
+msgid "Name"
+msgstr "Name"
+
+# @ gsmtheme
+#: comments.php:71 comments.php:75
+msgid " (required)"
+msgstr "(erforderlich)"
+
+# @ gsmtheme
+#: comments.php:75
+msgid "Email (will not be published)"
+msgstr "E-Mail (wird nicht veröffentlicht)"
+
+# @ gsmtheme
+#: comments.php:79
+msgid "Website"
+msgstr "Website"
+
+# @ gsmtheme
+#: comments.php:84
+msgid "Comment"
+msgstr "Kommentar"
+
+# @ gsmtheme
+#: comments.php:87
+msgid "You can use these tags:"
+msgstr "Sie können diese Tags verwenden:"
+
+# @ gsmtheme
+#: comments.php:88
+msgid "Submit Comment"
+msgstr "Kommentar absenden"
+
+# @ gsmtheme
+#: content-none.php:11
+msgid "Nothing Found"
+msgstr "nichts gefunden"
+
+# @ gsmtheme
+#: content-none.php:17
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Bereit, deinen ersten Beitrag zu veröffentlichen? <a href=\"%1$s\">Hier "
+"geht's los</a>"
+
+# @ gsmtheme
+#: content-none.php:21
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Es tut uns leid, aber es konnten keine Übereinstimmungen gefunden werden. "
+"Bitte versuche es mit einigen anderen Suchbegriffen erneut."
+
+# @ gsmtheme
+#: content-none.php:26
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Leider konnten wir die angefragte Seite nicht finden. Vielleicht hilft dir "
+"die Suchfunktion weiter."
+
+# @ gsmtheme
+#. /archive/search.
+#. *
+#. * @subpackage gsmtheme
+#. * @since gsmtheme 1.0.0
+#.
+#: content.php:16
+msgid "Continue reading..."
+msgstr "Weiterlesen..."
+
+# @ gsmtheme
+#: hero.php:40 kitchen-sink.php:739 page-full.php:19 page-sidebar-left.php:21
+#: page.php:18 single.php:27 woocommerce.php:18
+msgid "Pages:"
+msgstr "Seiten:"
+
+# @ gsmtheme
+#: library/entry-meta.php:4
+#, php-format
+msgid "Posted on %1$s at %2$s."
+msgstr "Veröffentlicht am %1$s um %2$s."
+
+# @ gsmtheme
+#: library/entry-meta.php:5
+msgid "Written by"
+msgstr "Geschrieben von"
+
+# @ gsmtheme
+#: library/foundation.php:16
+msgid "&laquo;"
+msgstr "&laquo;"
+
+# @ gsmtheme
+#: library/foundation.php:17
+msgid "&raquo;"
+msgstr "&raquo;"
+
+# @ gsmtheme
+#: library/foundation.php:40
+#, php-format
+msgid ""
+"Please assign a menu to the primary menu location under %1$s or %2$s the "
+"design."
+msgstr "Bitte weise ein Menü zur primären Menüposition %1$s oder %2$s zu."
+
+# @ gsmtheme
+#: library/foundation.php:41
+#, php-format
+msgid "<a href=\"%s\">Menus</a>"
+msgstr "<a href=\"%s\">Menüs</a>"
+
+# @ gsmtheme
+#: library/foundation.php:44
+#, php-format
+msgid "<a href=\"%s\">Customize</a>"
+msgstr "<a href=\"%s\">Anpassen</a>"
+
+# @ gsmtheme
+#: library/widget-areas.php:6
+msgid "Sidebar widgets"
+msgstr "Seitenleisten-Widgetbereich"
+
+# @ gsmtheme
+#: library/widget-areas.php:7
+msgid "Drag widgets to this sidebar container."
+msgstr "Ziehen Sie Widgets zu diesem Seitenleisten-Bereich."
+
+# @ gsmtheme
+#: library/widget-areas.php:16
+msgid "Footer widgets"
+msgstr "Footer-Widgetbereich"
+
+# @ gsmtheme
+#: library/widget-areas.php:17
+msgid "Drag widgets to this footer container"
+msgstr "Ziehen Sie Widgets zu diesem Footer-Bereich."
+
+#: node_modules/grunt-pot/test/fixtures/some-file.php:3
+msgid "I'm a translatable string."
+msgstr ""
+
+#: node_modules/grunt-pot/test/fixtures/some-other-file.php:4
+msgid "Me too"
+msgstr ""
+
+#: node_modules/grunt-pot/test/fixtures/some-other-file.php:7
+#, php-format
+msgid "I have %d apple"
+msgid_plural "I have %d apples"
+msgstr[0] ""
+msgstr[1] ""
+
+#. / TRANSLATORS: This should be translated as a shorthand for YEAR-MONTH-DAY using 4, 2 and 2 digits.
+#: node_modules/grunt-pot/test/fixtures/some-other-file.php:16
+msgid "yyyy-mm-dd"
+msgstr "dd.mm.yyyy"
+
+# @ gsmtheme
+#: search.php:7
+msgid "Search Results for"
+msgstr "Suchergebnisse für"
+
+# @ gsmtheme
+#: searchform.php:6 searchform.php:10
+msgid "Search"
+msgstr "Suche"

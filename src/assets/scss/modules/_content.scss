@@ -1,0 +1,120 @@
+.main-container {
+  @include xy-grid-container;
+}
+
+.main-grid {
+  @include xy-grid();
+  margin-top: 1rem;
+
+  @include breakpoint(medium) {
+    margin-top: 3rem;
+  }
+
+  &.sidebar-left {
+    // Place the sidebar below main content on small screens ...
+    @include breakpoint(small) {
+      .main-content { order: 1; }
+      .sidebar { order: 2; }
+    }
+
+    // ... and to the left on medium-up screens, when using the sidebar-left template
+    @include breakpoint(medium) {
+      .main-content { order: 2; }
+      .sidebar { order: 1; }
+    }
+  }
+
+  // Full width template
+  .main-content-full-width {
+    @include xy-cell(12);
+  }
+
+  // Default template
+  .main-content {
+    @include breakpoint(small) {
+      @include xy-cell(12);
+    }
+
+    @include breakpoint(medium) {
+      @include xy-cell(8);
+    }
+  }
+
+  .sidebar {
+    @include breakpoint(small) {
+      @include xy-cell(12);
+    }
+
+    @include breakpoint(medium) {
+      @include xy-cell(4);
+      margin-top: 1rem;
+    }
+
+  }
+}
+
+a {
+  @include transition(all .5s);
+}
+main {
+  animation: ajax-animation .5s;
+  p {
+    color: $txt-color;
+    font-family: $nova-regular;
+    line-height: 1.5;
+  }
+}
+.page-header.nothing-found {
+  font-family: $nova-bold;
+  h1 {
+    font-family: $nova-bold;
+  }
+}
+.nothing-found {
+  text-align: center;
+  font-family: $nova-italic;
+  p {
+    font-family: $nova-italic;
+  }
+}
+.main-404 {
+  width: 100%;
+  .entry-title {
+    font-family: $nova-bold;
+    text-align: center;
+    width: 100%;
+  }
+  .entry-content {
+    font-family: $nova-italic;
+    text-align: center;
+    p {
+      font-family: $nova-italic;
+    }
+    ul {
+      li {
+        list-style: none;
+        font-family: $nova-regular;
+        a {
+          color: $green;
+          &:hover {
+            color: #808080;
+          }
+        }
+      }
+    }
+  }
+}
+::selection {
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  background: $green; /* Safari */
+}
+::-moz-selection {
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  background: $green; /* Firefox */
+}
+.ajax-content {
+ 
+}
+

@@ -1,0 +1,107 @@
+.featured-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: rem-calc(100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include breakpoint(medium down) {
+    min-height: rem-calc(275);
+    height: auto;
+  }
+
+  @include breakpoint(xlarge) {
+    height: rem-calc(400);
+  }
+  h1 {
+    color: #fff;
+    font-size: 70px;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: $nova-bold;
+    @include breakpoint(medium down) {
+      font-size: rem-calc(34);
+    }
+  }
+}
+
+.site-header.featured-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: rem-calc(100);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  @include breakpoint(medium down) {
+    min-height: rem-calc(275);
+    height: auto;
+  }
+  @include breakpoint(large) {
+    height: rem-calc(410);
+  }
+  @include breakpoint(xlarge) {
+    height: rem-calc(700);
+  }
+  &.page {
+    @include breakpoint(medium down) {
+      min-height: rem-calc(275);
+      height: auto;
+    }
+    @include breakpoint(large) {
+      height: rem-calc(410);
+    }
+    @include breakpoint(xlarge) {
+      height: rem-calc(410);
+    }
+    .featured-hero-home {
+      height: 60%;
+      @include breakpoint(medium down) {
+        height: 100%;
+        margin-top: rem-calc(45);
+      }
+    }
+  }
+  h1, h2 {
+    color: #fff;
+    font-size: rem-calc(70);
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: $nova-bold;
+    @include breakpoint(medium down) {
+      font-size: rem-calc(30);
+    }
+  }
+  h2 {
+    font-size: 40px;
+    @include breakpoint(medium down) {
+      font-size: rem-calc(16);
+      margin-top: rem-calc(15);
+    }
+  }
+}
+.featured-hero-home {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70%;
+  width: 100%;
+  text-align: center;
+  font-family: $nova-bold;
+  @include breakpoint(medium down) {
+    height: 100%;
+    margin-top: rem-calc(45);
+    padding: 0 rem-calc(15);
+  }
+}
+.single {
+  .featured-hero-home {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,192 @@
+[type='text'],
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='tel'],
+[type='time'], 
+[type='url'],
+[type='color'],
+textarea,
+input {
+	border-radius: 4px;
+	outline: none;
+	box-shadow: none;
+	color: $title-color;
+	font-family: $nova-regular;
+	font-size: rem-calc(16);
+	line-height: 1;
+	border: 1px solid #e5e5e5;
+	min-height: 51px;
+	padding: 15px 20px;
+	margin-bottom: rem-calc(10);
+	@include transition-basics(all .3s);
+	&::-moz-placeholder,
+	&:-moz-placeholder,
+	&:-ms-input-placeholder,
+	&::-webkit-input-placeholder {
+		color: $title-color !important;
+		font-family: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		opacity: 1;
+		@include transition-basics(all .3s);
+	}
+	&:hover,
+	&:focus {
+		outline: none;
+		box-shadow: none;
+		border: 1px solid #bfbfbf;
+		&::-moz-placeholder,
+		&:-moz-placeholder,
+		&:-ms-input-placeholder,
+		&::-webkit-input-placeholder {
+			opacity: 0;
+		}
+	}
+}
+textarea {
+	max-height: 100px;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	&::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0);
+		border-radius: 10px;
+		background-color: transparent;
+	}
+	
+	&::-webkit-scrollbar {
+		width: 3px;
+		background-color: transparent;
+	}
+	
+	&::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);;
+		background: $green;
+	}
+}
+.contact-container {
+	@include xy-grid-container;
+	background: $white;
+	max-width: rem-calc(770);
+	padding: rem-calc(40) rem-calc(70) !important;
+	border-radius: 15px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+	margin-top: -5%;
+	@include breakpoint(medium down) {
+		padding: rem-calc(20) rem-calc(20) !important;
+		margin: 0 auto;
+		margin-top: rem-calc(-50);
+		position: relative;
+		left: 0;
+		right: 15px;
+		width: calc(100% - 30px);
+	}
+	@include breakpoint(small down) {
+		margin-left: rem-calc(15);
+		margin-right: rem-calc(15);
+		margin-top: rem-calc(-65);
+		right: 0;
+	}
+	.wpcf7-form {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		& > p {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 0 !important;
+		}
+		.zip-code-citoyen,
+		.zip-code-commune {
+			&:after {
+				content: '';
+				position: absolute;
+				z-index: 5;
+				top: 15px;
+				right: 15px;
+				background: url("../images/geo.png") no-repeat 50% 50%;
+				background-size: contain;
+				width: 21px;
+				height: 21px;
+				display: block;
+			}
+		}
+		.zip-code-citoyen,
+		.message-citoyen,
+		.zip-code-commune,
+		.message-commune {
+			flex: 1 100%;
+		}
+		.name-citoyen,
+		.email-commune,
+		.name-commune {
+			margin-right: 10px;
+		}
+		
+		.tel-commune,
+		.name-citoyen,
+		.name-commune,
+		.function-commune,
+		.email-citoyen,
+		.email-commune {
+			flex: 1 calc(50% - 10px);
+			@include breakpoint(medium down) {
+				flex: 1 100%;
+				margin-right: 0;
+			}
+		}
+	
+	}
+
+}
+.wpcf7-form-control-wrap {
+	position: relative;
+}
+.wpcf7-response-output {
+	border-radius: 10px;
+	color: $txt-color !important;
+	border-width: 1px !important;
+	margin: 15px auto !important;
+}
+.wpcf7-not-valid {
+	border: 1px solid rgba(91, 167, 69, .75);
+}
+.wpcf7-not-valid-tip {
+	position: absolute;
+	z-index: 10;
+	background: rgba(91, 167, 69, .75);
+	padding: 2px 7px;
+	border-radius: 10px;
+	right: 5px;
+	top: -15px;;
+	color: $white !important;
+	font-size: rem-calc(14) !important;
+	letter-spacing: .5px;
+}
+.contact_form_title {
+	color: $green;
+	text-transform: uppercase;
+	font-family: $nova-bold;
+	font-weight: 600;
+	text-align: center;
+	font-size: rem-calc(30);
+	margin-bottom: rem-calc(40);
+	@include breakpoint(medium down) {
+		font-size: rem-calc(24);
+		margin-bottom: rem-calc(20);
+	}
+}
